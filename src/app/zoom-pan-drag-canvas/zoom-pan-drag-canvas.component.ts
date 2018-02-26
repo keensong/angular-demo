@@ -43,13 +43,12 @@ export class ZoomPanDragCanvasComponent implements OnInit {
 
     this.height = this.canvas.height;
     this.width = this.canvas.width;
-
-    const theta = Math.PI * (3 - Math.sqrt(5)); // 画圆形
     for (let i = 0; i < this.shapeCounts; i++) {
-      const r = 10 * Math.sqrt(i), a = theta * i; // 画圆形
       const p =  [
-        this.width / 2 + r * Math.cos(a),
-        this.height / 2 + r * Math.sin(a)
+        this.getRandom(1, this.width),
+        this.getRandom(1, this.height),
+        this.getRandom(3, 12),
+        this.getRandom(3, 15)
       ];
       // console.log(i + " " + p);
       this.points.push(p);
@@ -75,9 +74,11 @@ export class ZoomPanDragCanvasComponent implements OnInit {
 
     for (let i = this.points.length - 1; i >= 0; --i) {
       const point = this.points[i];
-      const dx = x - point[0];
-      const dy = y - point[1];
-      if (dx * dx + dy * dy < this.radius * this.radius) {
+      const tx = point[0];
+      const ty = point[1];
+      const w = point[2];
+      const h = point[3];
+      if ( x >= tx && x <= tx + w && y >= ty && y <= ty + h ) {
         point.x = this.transform.applyX(point[0]);
         point.y = this.transform.applyY(point[1]);
         return point;
@@ -100,7 +101,7 @@ export class ZoomPanDragCanvasComponent implements OnInit {
     this.context.scale(this.transform.k, this.transform.k);
     this.points.forEach((point) => {
       this.context.moveTo(point[0] + this.radius, point[1]);
-      this.context.arc(point[0], point[1], this.radius, 0, 2 * Math.PI);
+      this.context.fillRect(point[0], point[1], point[2], point[3]);
     });
     this.context.fill();
     this.context.restore();
@@ -108,6 +109,11 @@ export class ZoomPanDragCanvasComponent implements OnInit {
 
   drawPoint(point) {
     this.context.moveTo(point[0] + this.radius, point[1]);
-    this.context.arc(point[0], point[1], this.radius, 0, 2 * Math.PI);
+    this.context.fillRect(point[0], point[1], point[2], point[3]);
   }
+
+  getRandom(min, max): any {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
 }
