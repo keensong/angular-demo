@@ -32,7 +32,6 @@ export class ZoomPanDragCanvasComponent implements OnInit {
 
   constructor() { }
 
-
   ngOnInit() {
     // 获取html中对应id的元素标签
     this.canvas = document.getElementById('mycanvaz');

@@ -6,11 +6,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ZoomPanDragCanvasComponent } from './zoom-pan-drag-canvas/zoom-pan-drag-canvas.component';
-
+import { ThreeCubeComponent } from './three-cube/three-cube.component';
 @NgModule({
   declarations: [
     AppComponent,
     ZoomPanDragCanvasComponent,
+    ThreeCubeComponent,
   ],
   imports: [
     BrowserModule,
