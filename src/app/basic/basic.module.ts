@@ -10,6 +10,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { RadarComponent } from './radar/radar.component';
 import { GuageComponent } from './guage/guage.component';
 import { BoxplotComponent } from './boxplot/boxplot.component';
+import { SimpleComponent } from './simple/simple.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { BoxplotComponent } from './boxplot/boxplot.component';
     PieChartComponent,
     RadarComponent,
     GuageComponent,
-    BoxplotComponent
+    BoxplotComponent,
+    SimpleComponent
   ]
 })
 export class BasicModule { }

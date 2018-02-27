@@ -29,7 +29,9 @@
         "../node_modules/echarts/theme/shine.js",
         "../node_modules/echarts/theme/infographic.js",
         "../node_modules/echarts/theme/vintage.js",
-        "../node_modules/echarts/dist/extension/dataTool.js"
+        "../node_modules/echarts/dist/extension/dataTool.min.js",
+        "../node_modules/echarts/dist/extension/bmap.min.js",
+        "../node_modules/echarts-gl/dist/echarts-gl.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
