@@ -7,6 +7,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { UpdateChartComponent } from './update-chart/update-chart.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { RadarComponent } from './radar/radar.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
     LoadingComponent,
     UpdateChartComponent,
     LineChartComponent,
-    PieChartComponent
+    PieChartComponent,
+    RadarComponent
   ]
 })
 export class BasicModule { }

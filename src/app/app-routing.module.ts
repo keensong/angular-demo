@@ -1,3 +1,4 @@
+import { RadarComponent } from './basic/radar/radar.component';
 import { PieChartComponent } from './basic/pie-chart/pie-chart.component';
 import { LineChartComponent } from './basic/line-chart/line-chart.component';
 import { UpdateChartComponent } from './basic/update-chart/update-chart.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'updataChart', component: UpdateChartComponent },
   { path: 'lineChart', component: LineChartComponent },
   { path: 'pieChart', component: PieChartComponent },
+  { path: 'radarChart', component: RadarComponent }
 ];
 
 @NgModule({
