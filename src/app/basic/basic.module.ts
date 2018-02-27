@@ -8,6 +8,7 @@ import { UpdateChartComponent } from './update-chart/update-chart.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { RadarComponent } from './radar/radar.component';
+import { GuageComponent } from './guage/guage.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { RadarComponent } from './radar/radar.component';
     UpdateChartComponent,
     LineChartComponent,
     PieChartComponent,
-    RadarComponent
+    RadarComponent,
+    GuageComponent
   ]
 })
 export class BasicModule { }
