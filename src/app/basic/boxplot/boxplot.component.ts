@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxEchartsService } from 'ngx-echarts';
 
-declare var echarts: any;
+// declare var echarts: any;
 
 @Component({
   selector: 'app-boxplot',
@@ -10,10 +11,10 @@ declare var echarts: any;
 export class BoxplotComponent implements OnInit {
 
   option: any;
-  constructor() { }
+  constructor(private nes: NgxEchartsService) { }
 
   ngOnInit() {
-    const data = echarts.dataTool.prepareBoxplotData([
+    const data = this.nes.echarts.dataTool.prepareBoxplotData([
       [850, 740, 900, 1070, 930, 850, 950, 980, 980, 880, 1000, 980, 930, 650, 760, 810, 1000, 1000, 960, 960],
       [960, 940, 960, 940, 880, 800, 850, 880, 900, 840, 830, 790, 810, 880, 880, 830, 800, 790, 760, 800],
       [880, 880, 880, 860, 720, 720, 620, 860, 970, 950, 880, 910, 850, 870, 840, 840, 850, 840, 840, 840],
