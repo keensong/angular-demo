@@ -11,6 +11,7 @@ import { ThreeCubeComponent } from './three-cube/three-cube.component';
 import { DynamicCycleComponent } from './dynamic-cycle/dynamic-cycle.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { BasicModule } from './basic/basic.module';
+import { ZoomPanDragSvgComponent } from './zoom-pan-drag-svg/zoom-pan-drag-svg.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BasicModule } from './basic/basic.module';
     ZoomPanDragCanvasComponent,
     ThreeCubeComponent,
     DynamicCycleComponent,
-    BubblesComponent
+    BubblesComponent,
+    ZoomPanDragSvgComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { ZoomPanDragSvgComponent } from './zoom-pan-drag-svg/zoom-pan-drag-svg.component';
 import { SimpleComponent } from './basic/simple/simple.component';
 import { BoxplotComponent } from './basic/boxplot/boxplot.component';
 import { GuageComponent } from './basic/guage/guage.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'zoompandrag', pathMatch: 'full' },
   // { path: 'dashboard',  component: DashboardComponent, canActivate: [AuthenticatedGuard] },
   { path: 'zoompandrag', component: ZoomPanDragCanvasComponent },
+  { path: 'zoompandragsvg', component: ZoomPanDragSvgComponent },
   { path: 'threeCube', component: ThreeCubeComponent },
   { path: 'dynamicycle', component: DynamicCycleComponent },
   { path: 'basic', component: BasicComponent },
