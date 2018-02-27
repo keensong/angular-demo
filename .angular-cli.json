@@ -28,7 +28,8 @@
         "../node_modules/echarts/theme/roma.js",
         "../node_modules/echarts/theme/shine.js",
         "../node_modules/echarts/theme/infographic.js",
-        "../node_modules/echarts/theme/vintage.js"
+        "../node_modules/echarts/theme/vintage.js",
+        "../node_modules/echarts/dist/extension/dataTool.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

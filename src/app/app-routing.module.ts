@@ -1,3 +1,4 @@
+import { BoxplotComponent } from './basic/boxplot/boxplot.component';
 import { GuageComponent } from './basic/guage/guage.component';
 import { RadarComponent } from './basic/radar/radar.component';
 import { PieChartComponent } from './basic/pie-chart/pie-chart.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'lineChart', component: LineChartComponent },
   { path: 'pieChart', component: PieChartComponent },
   { path: 'radarChart', component: RadarComponent },
-  { path: 'guage', component: GuageComponent }
+  { path: 'guage', component: GuageComponent },
+  { path: 'boxplot', component: BoxplotComponent }
 ];
 
 @NgModule({

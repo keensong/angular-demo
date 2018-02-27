@@ -9,6 +9,7 @@ import { LineChartComponent } from './line-chart/line-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { RadarComponent } from './radar/radar.component';
 import { GuageComponent } from './guage/guage.component';
+import { BoxplotComponent } from './boxplot/boxplot.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { GuageComponent } from './guage/guage.component';
     LineChartComponent,
     PieChartComponent,
     RadarComponent,
-    GuageComponent
+    GuageComponent,
+    BoxplotComponent
   ]
 })
 export class BasicModule { }
