@@ -1,3 +1,5 @@
+import { EventComponent } from './basic/event/event.component';
+import { BasicComponent } from './basic/basic.component';
 import { DynamicCycleComponent } from './dynamic-cycle/dynamic-cycle.component';
 import { ThreeCubeComponent } from './three-cube/three-cube.component';
 import { NgModule } from '@angular/core';
@@ -9,7 +11,9 @@ const routes: Routes = [
   // { path: 'dashboard',  component: DashboardComponent, canActivate: [AuthenticatedGuard] },
   { path: 'zoompandrag', component: ZoomPanDragCanvasComponent },
   { path: 'threeCube', component: ThreeCubeComponent },
-  { path: 'dynamicycle', component: DynamicCycleComponent }
+  { path: 'dynamicycle', component: DynamicCycleComponent },
+  { path: 'basic', component: BasicComponent },
+  { path: 'event', component: EventComponent }
 ];
 
 @NgModule({

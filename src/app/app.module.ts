@@ -9,20 +9,24 @@ import { AppComponent } from './app.component';
 import { ZoomPanDragCanvasComponent } from './zoom-pan-drag-canvas/zoom-pan-drag-canvas.component';
 import { ThreeCubeComponent } from './three-cube/three-cube.component';
 import { DynamicCycleComponent } from './dynamic-cycle/dynamic-cycle.component';
-import { BubblesChartComponent } from './custom/bubbles-chart/bubbles-chart.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { BasicModule } from './basic/basic.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     ZoomPanDragCanvasComponent,
     ThreeCubeComponent,
     DynamicCycleComponent,
-    BubblesComponent
+    BubblesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    NgxEchartsModule,
+    BasicModule
   ],
   providers: [],
   bootstrap: [AppComponent]
