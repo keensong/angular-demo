@@ -18,7 +18,7 @@ import { BasicModule } from './basic/basic.module';
     ZoomPanDragCanvasComponent,
     ThreeCubeComponent,
     DynamicCycleComponent,
-    BubblesComponent,
+    BubblesComponent
   ],
   imports: [
     BrowserModule,

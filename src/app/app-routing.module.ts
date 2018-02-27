@@ -1,3 +1,5 @@
+import { UpdateChartComponent } from './basic/update-chart/update-chart.component';
+import { LoadingComponent } from './basic/loading/loading.component';
 import { EventComponent } from './basic/event/event.component';
 import { BasicComponent } from './basic/basic.component';
 import { DynamicCycleComponent } from './dynamic-cycle/dynamic-cycle.component';
@@ -13,7 +15,9 @@ const routes: Routes = [
   { path: 'threeCube', component: ThreeCubeComponent },
   { path: 'dynamicycle', component: DynamicCycleComponent },
   { path: 'basic', component: BasicComponent },
-  { path: 'event', component: EventComponent }
+  { path: 'event', component: EventComponent },
+  { path: 'loading', component: LoadingComponent },
+  { path: 'updataChart', component: UpdateChartComponent },
 ];
 
 @NgModule({

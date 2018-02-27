@@ -4,6 +4,7 @@ import { BasicComponent } from './basic.component';
 import { EventComponent } from './event/event.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { LoadingComponent } from './loading/loading.component';
+import { UpdateChartComponent } from './update-chart/update-chart.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { LoadingComponent } from './loading/loading.component';
   declarations: [
     BasicComponent,
     EventComponent,
-    LoadingComponent
+    LoadingComponent,
+    UpdateChartComponent
   ]
 })
 export class BasicModule { }
