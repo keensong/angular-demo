@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 // import * as echarts from 'echarts';
 declare var echarts: any;
 
@@ -7,11 +7,13 @@ declare var echarts: any;
   templateUrl: './guage.component.html',
   styleUrls: ['./guage.component.css']
 })
-export class GuageComponent implements OnInit {
+export class GuageComponent implements OnInit, OnDestroy {
 
   option: any;
   private myChart: any;
   private dom: any;
+  private timer: any;
+  updateOptions: any;
 
   // @ViewChild('container') elementRef: ElementRef;
   // private container: HTMLElement;
@@ -302,19 +304,19 @@ export class GuageComponent implements OnInit {
       ]
   };
 
-  setInterval(() => {
+  this.timer = setInterval(() => {
       // let newData = this.myChart.getOption();
-      this.option.series[0].data[0].value = (Math.random() * 100).toFixed(2);
-      this.option.series[1].data[0].value = (Math.random() * 7).toFixed(2);
-      this.option.series[2].data[0].value = (Math.random() * 2).toFixed(2);
-      this.option.series[3].data[0].value = (Math.random() * 2).toFixed(2);
-      this.myChart.setOption(this.option, false);
-      console.log(this.option.series[0].data[0].value);
-      console.log(this.option.series[1].data[0].value);
-      console.log(this.option.series[2].data[0].value);
-      console.log(this.option.series[3].data[0].value);
+      this.updateOptions = Object.assign({}, this.option);
+      this.updateOptions.series[0].data[0].value = (Math.random() * 100).toFixed(2);
+      this.updateOptions.series[1].data[0].value = (Math.random() * 7).toFixed(2);
+      this.updateOptions.series[2].data[0].value = (Math.random() * 2).toFixed(2);
+      this.updateOptions.series[3].data[0].value = (Math.random() * 2).toFixed(2);
+      // this.myChart.setOption(this.option, false);
   }, 2000);
 
   } // ngOnInit
 
+  ngOnDestroy() {
+      clearInterval(this.timer);
+  }
 }
