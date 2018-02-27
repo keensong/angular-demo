@@ -1,3 +1,5 @@
+import { PieChartComponent } from './basic/pie-chart/pie-chart.component';
+import { LineChartComponent } from './basic/line-chart/line-chart.component';
 import { UpdateChartComponent } from './basic/update-chart/update-chart.component';
 import { LoadingComponent } from './basic/loading/loading.component';
 import { EventComponent } from './basic/event/event.component';
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'event', component: EventComponent },
   { path: 'loading', component: LoadingComponent },
   { path: 'updataChart', component: UpdateChartComponent },
+  { path: 'lineChart', component: LineChartComponent },
+  { path: 'pieChart', component: PieChartComponent },
 ];
 
 @NgModule({

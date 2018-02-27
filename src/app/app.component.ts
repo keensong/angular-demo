@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Sandbox for Angular 2 / D3!';
+  title = 'Example for Angular 2';
 }
