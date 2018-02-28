@@ -1,3 +1,4 @@
+import { LinPenComponent } from './basic/lin-pen/lin-pen.component';
 import { ZoomPanDragSvgComponent } from './zoom-pan-drag-svg/zoom-pan-drag-svg.component';
 import { SimpleComponent } from './basic/simple/simple.component';
 import { BoxplotComponent } from './basic/boxplot/boxplot.component';
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'radarChart', component: RadarComponent },
   { path: 'guage', component: GuageComponent },
   { path: 'boxplot', component: BoxplotComponent },
-  { path: 'simple', component: SimpleComponent }
+  { path: 'simple', component: SimpleComponent },
+  { path: 'linePen', component: LinPenComponent }
 ];
 
 @NgModule({

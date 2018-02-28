@@ -11,6 +11,7 @@ import { RadarComponent } from './radar/radar.component';
 import { GuageComponent } from './guage/guage.component';
 import { BoxplotComponent } from './boxplot/boxplot.component';
 import { SimpleComponent } from './simple/simple.component';
+import { LinPenComponent } from './lin-pen/lin-pen.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { SimpleComponent } from './simple/simple.component';
     RadarComponent,
     GuageComponent,
     BoxplotComponent,
-    SimpleComponent
+    SimpleComponent,
+    LinPenComponent
   ]
 })
 export class BasicModule { }
