@@ -27,11 +27,11 @@ export class LinPenComponent implements OnInit {
           text: 'Click to Add Points'
       },
       tooltip: {
-        // 默认为trigger为item
-        formatter: (params) => {
-          const data = params.data || [0, 0];
-          return data[0].toFixed(2) + ', ' + data[1].toFixed(2);
-      }
+          trigger: 'axis',
+          formatter: (params) => {
+            const data = params[0].data || [0, 0];
+            return data[0].toFixed(2) + ', ' + data[1].toFixed(2);
+        }
       },
       grid: {
           left: '3%',
