@@ -1,3 +1,4 @@
+import { BasicService } from './basic.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BasicComponent } from './basic.component';
@@ -12,11 +13,14 @@ import { GuageComponent } from './guage/guage.component';
 import { BoxplotComponent } from './boxplot/boxplot.component';
 import { SimpleComponent } from './simple/simple.component';
 import { LinPenComponent } from './lin-pen/lin-pen.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule} from '@angular/platform-browser';
 @NgModule({
   imports: [
     CommonModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    BrowserModule,
+    HttpClientModule
   ],
   declarations: [
     BasicComponent,
@@ -30,6 +34,9 @@ import { LinPenComponent } from './lin-pen/lin-pen.component';
     BoxplotComponent,
     SimpleComponent,
     LinPenComponent
+  ],
+  providers: [
+    { provide: 'basicService', useClass: BasicService }
   ]
 })
 export class BasicModule { }
