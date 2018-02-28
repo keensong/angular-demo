@@ -12,6 +12,7 @@ import { DynamicCycleComponent } from './dynamic-cycle/dynamic-cycle.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { BasicModule } from './basic/basic.module';
 import { ZoomPanDragSvgComponent } from './zoom-pan-drag-svg/zoom-pan-drag-svg.component';
+import { ZoomPanDragCircleComponent } from './zoom-pan-drag-circle/zoom-pan-drag-circle.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ZoomPanDragSvgComponent } from './zoom-pan-drag-svg/zoom-pan-drag-svg.c
     ThreeCubeComponent,
     DynamicCycleComponent,
     BubblesComponent,
-    ZoomPanDragSvgComponent
+    ZoomPanDragSvgComponent,
+    ZoomPanDragCircleComponent
   ],
   imports: [
     BrowserModule,

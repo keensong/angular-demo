@@ -1,3 +1,4 @@
+import { ZoomPanDragCircleComponent } from './zoom-pan-drag-circle/zoom-pan-drag-circle.component';
 import { LinPenComponent } from './basic/lin-pen/lin-pen.component';
 import { ZoomPanDragSvgComponent } from './zoom-pan-drag-svg/zoom-pan-drag-svg.component';
 import { SimpleComponent } from './basic/simple/simple.component';
@@ -17,8 +18,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ZoomPanDragCanvasComponent } from './zoom-pan-drag-canvas/zoom-pan-drag-canvas.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'zoompandrag', pathMatch: 'full' },
+  { path: '', redirectTo: 'zoompandragcircle', pathMatch: 'full' },
   // { path: 'dashboard',  component: DashboardComponent, canActivate: [AuthenticatedGuard] },
+  { path: 'zoompandragcircle', component: ZoomPanDragCircleComponent },
   { path: 'zoompandrag', component: ZoomPanDragCanvasComponent },
   { path: 'zoompandragsvg', component: ZoomPanDragSvgComponent },
   { path: 'threeCube', component: ThreeCubeComponent },
