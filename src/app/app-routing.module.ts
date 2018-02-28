@@ -1,3 +1,4 @@
+import { ThreeViewComponent } from './basic/three-view/three-view.component';
 import { ZoomPanDragCircleComponent } from './zoom-pan-drag-circle/zoom-pan-drag-circle.component';
 import { LinPenComponent } from './basic/lin-pen/lin-pen.component';
 import { ZoomPanDragSvgComponent } from './zoom-pan-drag-svg/zoom-pan-drag-svg.component';
@@ -35,7 +36,8 @@ const routes: Routes = [
   { path: 'guage', component: GuageComponent },
   { path: 'boxplot', component: BoxplotComponent },
   { path: 'simple', component: SimpleComponent },
-  { path: 'linePen', component: LinPenComponent }
+  { path: 'linePen', component: LinPenComponent },
+  { path: 'threeview', component: ThreeViewComponent }
 ];
 
 @NgModule({

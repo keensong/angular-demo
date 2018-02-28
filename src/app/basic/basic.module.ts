@@ -12,6 +12,7 @@ import { GuageComponent } from './guage/guage.component';
 import { BoxplotComponent } from './boxplot/boxplot.component';
 import { SimpleComponent } from './simple/simple.component';
 import { LinPenComponent } from './lin-pen/lin-pen.component';
+import { ThreeViewComponent } from './three-view/three-view.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { LinPenComponent } from './lin-pen/lin-pen.component';
     GuageComponent,
     BoxplotComponent,
     SimpleComponent,
-    LinPenComponent
+    LinPenComponent,
+    ThreeViewComponent
   ]
 })
 export class BasicModule { }
