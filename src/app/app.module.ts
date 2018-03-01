@@ -1,3 +1,4 @@
+import { HomeModule } from './home/home.module';
 import { BubblesComponent } from './custom/bubbles.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,6 +14,10 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { BasicModule } from './basic/basic.module';
 import { ZoomPanDragSvgComponent } from './zoom-pan-drag-svg/zoom-pan-drag-svg.component';
 import { ZoomPanDragCircleComponent } from './zoom-pan-drag-circle/zoom-pan-drag-circle.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,8 @@ import { ZoomPanDragCircleComponent } from './zoom-pan-drag-circle/zoom-pan-drag
     DynamicCycleComponent,
     BubblesComponent,
     ZoomPanDragSvgComponent,
-    ZoomPanDragCircleComponent
+    ZoomPanDragCircleComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,12 @@ import { ZoomPanDragCircleComponent } from './zoom-pan-drag-circle/zoom-pan-drag
     AppRoutingModule,
     HttpModule,
     NgxEchartsModule,
-    BasicModule
+    BasicModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    HomeModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
