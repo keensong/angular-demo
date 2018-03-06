@@ -1,3 +1,4 @@
+import { ImageComponent } from './basic/image/image.component';
 import { HomeComponent } from './home/home.component';
 import { ThreeViewComponent } from './basic/three-view/three-view.component';
 import { ZoomPanDragCircleComponent } from './zoom-pan-drag-circle/zoom-pan-drag-circle.component';
@@ -39,7 +40,8 @@ const routes: Routes = [
   { path: 'boxplot', component: BoxplotComponent },
   { path: 'simple', component: SimpleComponent },
   { path: 'linePen', component: LinPenComponent },
-  { path: 'threeview', component: ThreeViewComponent }
+  { path: 'threeview', component: ThreeViewComponent },
+  { path: 'image', component: ImageComponent }
 ];
 
 @NgModule({

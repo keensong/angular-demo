@@ -13,6 +13,7 @@ import { BoxplotComponent } from './boxplot/boxplot.component';
 import { SimpleComponent } from './simple/simple.component';
 import { LinPenComponent } from './lin-pen/lin-pen.component';
 import { ThreeViewComponent } from './three-view/three-view.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { ThreeViewComponent } from './three-view/three-view.component';
     BoxplotComponent,
     SimpleComponent,
     LinPenComponent,
-    ThreeViewComponent
+    ThreeViewComponent,
+    ImageComponent
   ]
 })
 export class BasicModule { }

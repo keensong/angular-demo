@@ -61,19 +61,19 @@ export class ThreeViewComponent implements OnInit {
         }
       },
       // 默认情况下, x, y, z 分别是从 0 到 1 的数值轴
-      xAxis3D: {max: 300},
-      yAxis3D: {max: 300},
-      zAxis3D: {max: 3000},
+      xAxis3D: {},
+      yAxis3D: {},
+      zAxis3D: {},
       series: [{
-        // type: 'scatter3D', 点云
-        type: 'bar3D',
-        shading: 'realistic',
-        barSize: 1,
+        type: 'scatter3D', // 点云
+        // type: 'bar3D',
+        // shading: 'realistic',
+        // barSize: 1,
         // wireframe: {
         //   show: false
         // },
         data: this.points,
-        // symbolSize: 1
+        symbolSize: 3
       }]
    };
   }
@@ -111,20 +111,6 @@ export class ThreeViewComponent implements OnInit {
            console.log(this.points);
         }
       });
-
-      // allLines.map( (line) => {
-      //   if (line) {
-
-      //     this.points[index] = parseFloat(line);
-      //     console.log(this.points);
-      //     index++;
-      //     if (index === len) {
-      //       this.isLoading = !this.isLoading; // 数据转换完成
-      //       this.updateFileDataToView();
-      //      }
-      //      // console.log(this.points);
-      //   }
-      // });
     };
     reader.readAsText(fileName);
   }
