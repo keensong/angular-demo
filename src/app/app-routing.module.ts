@@ -1,3 +1,4 @@
+import { AnimationComponent } from './animation/animation.component';
 import { ImageComponent } from './basic/image/image.component';
 import { HomeComponent } from './home/home.component';
 import { ThreeViewComponent } from './basic/three-view/three-view.component';
@@ -41,7 +42,8 @@ const routes: Routes = [
   { path: 'simple', component: SimpleComponent },
   { path: 'linePen', component: LinPenComponent },
   { path: 'threeview', component: ThreeViewComponent },
-  { path: 'image', component: ImageComponent }
+  { path: 'image', component: ImageComponent },
+  { path: 'example1', component: AnimationComponent }
 ];
 
 @NgModule({

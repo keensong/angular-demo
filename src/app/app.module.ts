@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
+import { AnimationComponent } from './animation/animation.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatIconModule } from '@angular/material/icon';
     BubblesComponent,
     ZoomPanDragSvgComponent,
     ZoomPanDragCircleComponent,
-    HomeComponent
+    HomeComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,
