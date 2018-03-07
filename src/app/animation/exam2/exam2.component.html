@@ -1,3 +1,14 @@
+<h1>动画实例</h1>
+<div>
+  <button (click)="changState('left')">状态变成左</button>
+  <button (click)="changState('right')">状态变成右</button>
+  <button (click)="changState('')">状态为空</button>
+  <button (click)="changState('center')">状态为中</button>
+  <button (click)="changShow()">显示/隐藏</button>
+</div>
+<br>
+<div *ngIf="show" style="height: 100px;width: 100px;background-color: black" [@box]="boxState"></div>
+
 <h2>基于关键帧(Keyframes)的多阶段动画</h2>
 
 <div  style="padding-left: 300px;">
@@ -8,4 +19,16 @@
   <div *ngIf="Keyframes" 
   style="height: 100px;width: 100px;background-color: black; border-radius: 50px;" 
   [@KeyframesAnimate]="boxState"></div>
+</div>
+
+<h2>并行动画组(Group)</h2>
+
+<div  style="padding-left: 300px;">
+  <div>
+    <button (click)="GroupShow()">{{Group?'隐藏':'显示'}}</button>
+  </div>
+  <br>
+  <div *ngIf="Group" style="height: 100px;width: 100px;background-color: black; border-radius: 50px;"
+       [@GroupAnimate]="boxState" (@GroupAnimate.done)="Callback(false)" (@GroupAnimate.start)="Callback(true)">
+  </div>
 </div>

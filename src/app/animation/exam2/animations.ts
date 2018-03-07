@@ -1,4 +1,4 @@
-import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { trigger, state, style, transition, animate, keyframes, group } from '@angular/animations';
 
 // 定义一个动画，左右两个状态加上颜色变化更容易理解吧
 export const boxAnimate2 = trigger('box', [
@@ -31,3 +31,17 @@ export const KeyframesAnimate = trigger('KeyframesAnimate', [
     ]),
 
 ]);
+
+export const GroupAnimate = trigger('GroupAnimate', [
+    // 入场动画
+    transition(':enter', [
+      style({ opacity: 0, width: '0px', height: '0px', transform: 'translateX(-200%)'}),
+      group([
+        animate('1s ease', style({transform: 'translateX(0)'})),
+        animate('1s 200ms ease', style({width: '100px'})),
+        animate('1s 200ms ease', style({height: '100px'})),
+        animate('0.5s', style({opacity: 1})),
+      ])
+    ]),
+  ]);
+
