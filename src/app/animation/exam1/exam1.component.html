@@ -1,4 +1,13 @@
 <div class="traffic-light"
-     [@signal]="'go'"
+     [@signal]="signal"
 >
 </div>
+
+<button mat-raised-button
+        color="primary"
+        (click)="onGo()"
+>Go</button>
+<button mat-raised-button
+        color="primary"
+        (click)="onStop()"
+>Stop</button>

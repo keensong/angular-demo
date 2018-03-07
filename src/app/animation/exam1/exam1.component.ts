@@ -13,6 +13,9 @@ import { animation } from '@angular/core/src/animation/dsl';
     trigger('signal', [
       state('go', style({
         'background-color': 'green'
+      })),
+      state('stop', style({
+        'background-color': 'red'
       }))
     ])
   ]
@@ -23,6 +26,14 @@ import { animation } from '@angular/core/src/animation/dsl';
 // @import "~material-design-icons/iconfont/material-icons.css";
 export class Exam1Component {
 
-
+  signal: string;
   constructor() { }
+
+  onGo(): void {
+    this.signal = 'go';
+  }
+
+  onStop(): void {
+    this.signal = 'stop';
+  }
 }
