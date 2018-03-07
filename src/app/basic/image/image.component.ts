@@ -40,20 +40,24 @@ export class ImageComponent implements OnInit {
         tooltip: {},
         // backgroundColor: '#fff',
         xAxis3D: {
-          type: 'value'
+          type: 'value',
+          axisPointer: true
         },
         yAxis3D: {
-          type: 'value'
+          type: 'value',
+          axisPointer: true
         },
         zAxis3D: {
           type: 'value',
+          axisPointer: true,
           min: 0,
-          max: 1000
+          max: 800
         },
         grid3D: {
-          axisPointer: {
-              show: true
-          },
+          // show: true,
+          // axisPointer: {
+          //     show: true
+          // },
           viewControl: {
               distance: 200 // 调节视图的远近距离，距离视角距离,越小离得越近
           },
@@ -78,6 +82,11 @@ export class ImageComponent implements OnInit {
         series: [{
           type: 'surface',
           silent: true,
+          // 曲面图中三维图形的着色效果
+          // 'color' 只显示颜色;'lambert' 通过经典的 lambert 着色表现光照带来的明暗;
+          // 'realistic' 真实感渲染
+          // shading: 'realistic',
+          // 将点云数据加上网格
           wireframe: {
               show: false
           },
@@ -120,7 +129,7 @@ export class ImageComponent implements OnInit {
       for ( let i = 0; i < this.imgData.data.length / 4; i++) {
 
         // 转换为x,y,z存入
-        this.data.push([i % w, h - Math.floor(i / w), this.zPoints[i]]);
+        this.data.push([i % w, h - Math.floor(i / w), this.zPoints[i] + 5]);
       }
       this.option.series.data = this.data;
       this.myChart.setOption(this.option, false);
