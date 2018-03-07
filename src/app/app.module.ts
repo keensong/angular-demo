@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { AnimationComponent } from './animation/animation.component';
+import { Exam1Component } from './animation/exam1/exam1.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AnimationComponent } from './animation/animation.component';
     ZoomPanDragSvgComponent,
     ZoomPanDragCircleComponent,
     HomeComponent,
-    AnimationComponent
+    AnimationComponent,
+    Exam1Component
   ],
   imports: [
     BrowserModule,

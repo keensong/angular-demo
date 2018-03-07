@@ -1,3 +1,4 @@
+import { Exam1Component } from './animation/exam1/exam1.component';
 import { AnimationComponent } from './animation/animation.component';
 import { ImageComponent } from './basic/image/image.component';
 import { HomeComponent } from './home/home.component';
@@ -43,7 +44,8 @@ const routes: Routes = [
   { path: 'linePen', component: LinPenComponent },
   { path: 'threeview', component: ThreeViewComponent },
   { path: 'image', component: ImageComponent },
-  { path: 'example1', component: AnimationComponent }
+  { path: 'example1', component: AnimationComponent },
+  { path: 'example1', component: Exam1Component }
 ];
 
 @NgModule({
