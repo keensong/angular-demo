@@ -35,12 +35,15 @@ export const KeyframesAnimate = trigger('KeyframesAnimate', [
 export const GroupAnimate = trigger('GroupAnimate', [
     // 入场动画
     transition(':enter', [
+        // 这里是将初始的透明，宽度，高度都设置为0，那么就不能显示，translateX为初始的位置，偏左
       style({ opacity: 0, width: '0px', height: '0px', transform: 'translateX(-200%)'}),
       group([
-        animate('1s ease', style({transform: 'translateX(0)'})),
+        // Group实现并行动画
+        animate('1s ease', style({transform: 'translateX(0)'})), // 1s加载 比初始位置靠右了一点
+        // 1s加载 200ms延迟 width增加为100px，如果为200那么初始就不是圆形了，但是最后还是会变成圆形，因为在html中已经设置过了
         animate('1s 200ms ease', style({width: '100px'})),
-        animate('1s 200ms ease', style({height: '100px'})),
-        animate('0.5s', style({opacity: 1})),
+        animate('1s 200ms ease', style({height: '100px'})), // 1s加载 200ms延迟
+        animate('0.5s', style({opacity: 1})), // 0.5s加载 显示完整的圆形
       ])
     ]),
   ]);
