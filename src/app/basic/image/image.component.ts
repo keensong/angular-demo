@@ -48,14 +48,14 @@ export class ImageComponent implements OnInit {
         zAxis3D: {
           type: 'value',
           min: 0,
-          max: 3000
+          max: 1000
         },
         grid3D: {
           axisPointer: {
-              show: false
+              show: true
           },
           viewControl: {
-              distance: 100 // 调节视图的远近距离，距离视角距离,越小离得越近
+              distance: 200 // 调节视图的远近距离，距离视角距离,越小离得越近
           },
           postEffect: {
               enable: true
