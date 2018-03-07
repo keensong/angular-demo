@@ -3,7 +3,8 @@ import { Component,
          state,   // 定义动画的状态
          style,   // 定义动画的样式
          transition,
-         animate
+         animate,
+         keyframes
        } from '@angular/core';
 import { animation } from '@angular/core/src/animation/dsl';
 
@@ -24,7 +25,15 @@ import { animation } from '@angular/core/src/animation/dsl';
         'background-color': 'red',
         'height': '50px'
       })),
-      transition('void => *', animate('.5s 1s')) // .5s代表过度时间为0.5s，1s为延迟1s后播放
+      transition('void => *', animate(5000, keyframes([
+        style({'transform': 'scale(0)'}),
+        style({'transform': 'scale(0.1)'}),
+        style({'transform': 'scale(0.5)'}),
+        style({'transform': 'scale(0.9)'}),
+        style({'transform': 'scale(0.95)'}),
+        style({'transform': 'scale(1)'})
+      ]))),
+      transition('* => *', animate('.5s 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)'))
     ])
   ]
 })
