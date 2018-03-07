@@ -1,3 +1,4 @@
+import { Exam2Component } from './animation/exam2/exam2.component';
 import { Exam1Component } from './animation/exam1/exam1.component';
 import { AnimationComponent } from './animation/animation.component';
 import { ImageComponent } from './basic/image/image.component';
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: 'threeview', component: ThreeViewComponent },
   { path: 'image', component: ImageComponent },
   { path: 'example', component: AnimationComponent },
+  { path: 'example2', component: Exam2Component }
 ];
 
 @NgModule({

@@ -1,0 +1,9 @@
+<h1>动画实例</h1>
+<div>
+  <button (click)="changeState('left')">状态变成左</button>
+  <button (click)="changeState('right')">状态变成右</button>
+  <button (click)="changeState('')">状态为空</button>
+  <button (click)="changeState('center')">状态为中</button>
+</div>
+<br>
+<div style="height: 100px;width: 100px;background-color: black" [@box]="boxState"></div>
