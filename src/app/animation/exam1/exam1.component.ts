@@ -1,7 +1,9 @@
 import { Component,
          trigger, // 用来定义触发器的
          state,   // 定义动画的状态
-         style    // 定义动画的样式
+         style,   // 定义动画的样式
+         transition,
+         animate
        } from '@angular/core';
 import { animation } from '@angular/core/src/animation/dsl';
 
@@ -11,12 +13,18 @@ import { animation } from '@angular/core/src/animation/dsl';
   styleUrls: ['./exam1.component.css'],
   animations: [
     trigger('signal', [
+      state('void', style({
+        'transform': 'translateY(-100%)'
+      })),
       state('go', style({
-        'background-color': 'green'
+        'background-color': 'green',
+        'height': '100px'
       })),
       state('stop', style({
-        'background-color': 'red'
-      }))
+        'background-color': 'red',
+        'height': '50px'
+      })),
+      transition('void => *', animate(500)) // 只要从void到任何状态都会触发，angular将做500ms的动画，
     ])
   ]
 })
@@ -26,6 +34,8 @@ import { animation } from '@angular/core/src/animation/dsl';
 // @import "~material-design-icons/iconfont/material-icons.css";
 export class Exam1Component {
 
+  // 如果这里设置了signal = 'void'那么将会出现，加载的时候，矩形颜色块并没有动
+  // 只有当点击按钮之后，才能触发void状态到其他状态的改变
   signal: string;
   constructor() { }
 

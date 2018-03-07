@@ -44,8 +44,7 @@ const routes: Routes = [
   { path: 'linePen', component: LinPenComponent },
   { path: 'threeview', component: ThreeViewComponent },
   { path: 'image', component: ImageComponent },
-  { path: 'example1', component: AnimationComponent },
-  { path: 'example1', component: Exam1Component }
+  { path: 'example', component: AnimationComponent },
 ];
 
 @NgModule({
