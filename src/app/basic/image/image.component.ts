@@ -37,7 +37,9 @@ export class ImageComponent implements OnInit {
       this.imgData = ctx.getImageData(0, 0, width, height);
 
       this.option = {
-        tooltip: {},
+        tooltip: {
+          // trigger: 'item'
+        },
         // backgroundColor: '#fff',
         xAxis3D: {
           type: 'value',
@@ -87,6 +89,8 @@ export class ImageComponent implements OnInit {
           // 'realistic' 真实感渲染
           // shading: 'realistic',
           // 将点云数据加上网格
+          // tooltip: {
+          // },
           wireframe: {
               show: false
           },
