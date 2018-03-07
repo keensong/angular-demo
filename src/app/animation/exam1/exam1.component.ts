@@ -24,7 +24,7 @@ import { animation } from '@angular/core/src/animation/dsl';
         'background-color': 'red',
         'height': '50px'
       })),
-      transition('void => *', animate(500)) // 只要从void到任何状态都会触发，angular将做500ms的动画，
+      transition('void => *', animate('.5s 1s')) // .5s代表过度时间为0.5s，1s为延迟1s后播放
     ])
   ]
 })
